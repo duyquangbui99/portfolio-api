@@ -4,7 +4,9 @@ const cors = require('cors');
 const { OpenAI } = require('openai');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json());
 
 const openai = new OpenAI({
@@ -28,5 +30,6 @@ app.post('/chat', async (req, res) => {
 });
 
 // ✅ Use dynamic port for Azure or default to 3001 locally
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));
