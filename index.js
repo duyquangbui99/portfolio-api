@@ -27,4 +27,6 @@ app.post('/chat', async (req, res) => {
     }
 });
 
-app.listen(3001, () => console.log("API running on http://localhost:3001"));
+// ✅ Use dynamic port for Azure or default to 3001 locally
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`API running on http://localhost:${PORT}`));
