@@ -9,6 +9,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// ✅ TEST ROUTE TO CHECK IF API WORKS
+app.get('/', (req, res) => {
+    res.send("Hi THIS IS QUANG's API, I JUST WANT to test if it works!");
+});
+
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
