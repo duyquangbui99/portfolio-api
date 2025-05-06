@@ -6,6 +6,8 @@ const openai = new OpenAI({
 });
 
 module.exports = async (req, res) => {
+    console.log("Method:", req.method);
+    console.log("Body:", req.body);
     if (req.method !== 'POST') return res.status(405).end('Method Not Allowed');
 
     const userMessage = req.body.message;
