@@ -1,19 +1,17 @@
 {
   "name": "main-portfolio-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API deployed as Vercel serverless functions",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "vercel dev",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^5.1.0",
     "openai": "^4.91.1"
-  }
+  },
+  "devDependencies": {}
 }
